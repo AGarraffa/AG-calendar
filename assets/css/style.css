@@ -1,0 +1,16 @@
+* {
+    border: 1px solid red;
+}
+
+
+.planner {
+    width: 50%
+}
+
+#A9 {
+    background-color: red;
+}
+
+.event {
+    background-color: red;
+}
