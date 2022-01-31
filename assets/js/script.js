@@ -1,8 +1,9 @@
 // TODO
-// for the container make sure it doesn't wrap on mobile 
-// event listener on save press to save the text in the field to local storage
+// add a clear button to each hour
 // style style style
+// for the container make sure it doesn't wrap on mobile
 // maybe change the time/date at the top to be a live clock using an interval function
+
 
 
 //moment testing
@@ -22,14 +23,11 @@ $('#current-time').text(`Today is ${day} ${today}. The time is ${time}.`)
 // array for all the div classes
 const appt = $('div.event');
 
+// array for the buttons
+const save = $('button.save')
+
 // gets the hour of the day (out of 24). Since the day starts at 7, subtract 7 from the hour to identify which div to style
 var hour = moment().hour() - 7;
-
-
-// TODO
-// for the container make sure it doesn't wrap on mobile 
-// event listener on save press to save the text in the field to local storage
-// style style style
 
 // sets the current hour to red
 $(appt[hour]).css('background-color', 'red');
@@ -47,5 +45,25 @@ for (let i = 0; i < appt.length; i++) {
     }
 }
 
-// use this on an event listener to set the contents of the event div to memory. change 'text' to the proper syntax.
-// localStorage.setItem('7A', 'text'); 
+
+// sets the contents of the planner from local storage
+for (let i=0; i < appt.length; i++) {
+    // $(appt[i].text((i+7) + 'hour'));
+    let key = (i+7) + "hour"
+    console.log(localStorage.getItem(key))
+    appt[i].innerHTML = localStorage.getItem(key)
+    console.log(appt[i].innerHTML)
+}
+
+
+// event listener applying a save function to each button
+// the keyNames are dynamically generated based on the position in the loop
+// they go from 7hour to 17hour
+for (let i = 0; i < save.length; i++) {
+    $(save[i]).on( "click", function() {
+
+        localStorage.setItem((i+7) + 'hour', appt[i].innerHTML);
+
+    });
+      
+}
