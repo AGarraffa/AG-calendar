@@ -1,3 +1,9 @@
+// TODO
+// for the container make sure it doesn't wrap on mobile 
+// event listener on save press to save the text in the field to local storage
+// style style style
+// maybe change the time/date at the top to be a live clock using an interval function
+
 
 //moment testing
 var date = moment();
@@ -20,29 +26,16 @@ const appt = $('div.event');
 var hour = moment().hour() - 7;
 
 
-// Psuedo code
-// 24 divs/rows (one for each hour)
-// within each row: first column is an hour; second column is an interactable box. When you click on it you can type an appt. Possibly do a modal that pops up a box with a time dropdown and an entry for what the appt is; the third column is a save button that saves the entry to memory
-// Three states to each box: gray is for past, red is for the current hour, and green is for the future
+// TODO
 // for the container make sure it doesn't wrap on mobile 
-// write a function that checks the current time and applies a color to each div based on that
-// function labelFunction() {
-    // for loop through the divs
-    // if the hour is less than now, color is gray
-    // if the hour is now, color is red
-    // if the hour is future, color is green
-    // do this via $(element).addClass("whatever") and have the classes styled in the css
-
-    // variable with getelementbyclassname yields an array with each element
-    // forEach loop over these elements with an if statement to set the background color
-    // use the array position +7 to identify time. The hour is given in 00-24
-
+// event listener on save press to save the text in the field to local storage
+// style style style
 
 // sets the current hour to red
 $(appt[hour]).css('background-color', 'red');
 
 // sets the other times to the respective colors
-// I wanted to use a foreach loop but it was giving me trouble.
+// I wanted to use a foreach loop but it was giving me trou
 for (let i = 0; i < appt.length; i++) {
 
     if (i < hour) {
@@ -53,3 +46,6 @@ for (let i = 0; i < appt.length; i++) {
         $(appt[i]).css('background-color', 'green');
     }
 }
+
+// use this on an event listener to set the contents of the event div to memory. change 'text' to the proper syntax.
+// localStorage.setItem('7A', 'text'); 
