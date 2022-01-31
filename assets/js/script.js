@@ -25,6 +25,7 @@ const appt = $('div.event');
 
 // array for the buttons
 const save = $('button.save')
+const clear = $('button.clear')
 
 // gets the hour of the day (out of 24). Since the day starts at 7, subtract 7 from the hour to identify which div to style
 var hour = moment().hour() - 7;
@@ -67,3 +68,16 @@ for (let i = 0; i < save.length; i++) {
     });
       
 }
+
+// clears the events of the div with the clear button press
+for (let i = 0; i < clear.length; i++) {
+    $(clear[i]).on( "click", function() {
+
+        localStorage.setItem((i+7) + 'hour', "");
+        appt[i].innerHTML = ""
+
+    });
+      
+}
+
+
