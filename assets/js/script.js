@@ -19,8 +19,10 @@ console.log(`Today is ${day}`);
 var time = date.format('LT');
 console.log(`The current time is ${time}`);
 
-// rendering the date, day, and time to the html
-$('#current-time').text(`Today is ${day} ${today}. The time is ${time}.`)
+
+// variable for a live clock
+var clockElement = $('clock');
+
 
 // array for all the div classes
 const appt = $('div.event');
@@ -31,6 +33,12 @@ const clear = $('button.clear')
 
 // gets the hour of the day (out of 24). Since the day starts at 7, subtract 7 from the hour to identify which div to style
 var hour = moment().hour() - 7;
+
+
+// renders the current time as a live clock
+window.setInterval(function () {
+    $('#clock').html(moment().format('dddd MMMM DD, yyyy H:mm:ss'))
+}, 1000);
 
 // sets the current hour to green
 $(appt[hour]).css('background-color', 'rgb(198, 213, 126)');
@@ -82,5 +90,3 @@ for (let i = 0; i < clear.length; i++) {
     });
       
 }
-
-

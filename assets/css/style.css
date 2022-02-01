@@ -2,16 +2,38 @@
     --green: rgb(198, 213, 126);
     --red: rgb(213, 126, 126);
     --blue: rgb(162, 205, 205);
+    --ltyellow: rgba(255, 226, 175, 0.623);
     --yellow: rgb(255, 225, 175);
+    --purple: rgb(217, 215, 241);
 }
 
-/* * {
-    border: 1px solid red;
-} */
+* {
+    font-family: 'Quicksand', sans-serif;
+}
 
+body {
+    background-color: var(--purple);
+}
+
+.hero {
+    text-align: center;
+    padding-top: 30px;
+    border-bottom: black 4px solid;
+    background-color: white;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.splash {
+    padding: 50px 0 20px 0;
+    font-size: 3rem;
+}
 
 .planner {
     width: 92%;
+    padding-top: 40px;
     /* border: 1px solid blue; */
     /* border-radius: 7px; */
 }
@@ -23,19 +45,23 @@
 .row {
     /* border: 1px solid black; */
     /* border-radius: 5px; */
-    min-height: 40px;
+    min-height: 50px;
     padding: 5px;
 }
 
 .time {
     background-color: var(--yellow);
     border-radius: 5px 0 0 5px;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 8px 0;
 }
 
 .event {
     border-width: 1px 1px 1px 0;
     border: solid black;
     border-radius: 0 5px 5px 0;
+    font-size: 1.2rem;
 }
 
 .save, .clear {
@@ -44,9 +70,9 @@
 }
 
 .save {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.281);
 }
 
 .clear {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.295);
 }
