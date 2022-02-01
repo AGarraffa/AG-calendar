@@ -1,8 +1,8 @@
 :root {
-    -- green: rgb(198, 213, 126)
-    --red: rgb(213, 126, 126)
-    --blue: rgb(162, 205, 205)
-    --yellow: rgb(255, 225, 175)
+    --green: rgb(198, 213, 126);
+    --red: rgb(213, 126, 126);
+    --blue: rgb(162, 205, 205);
+    --yellow: rgb(255, 225, 175);
 }
 
 /* * {
@@ -12,7 +12,8 @@
 
 .planner {
     width: 92%;
-    border: 1px solid black;
+    /* border: 1px solid blue; */
+    /* border-radius: 7px; */
 }
 
 .full-day {
@@ -20,12 +21,21 @@
 }
 
 .row {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    /* border-radius: 5px; */
     min-height: 40px;
+    padding: 5px;
 }
 
 .time {
     background-color: var(--yellow);
+    border-radius: 5px 0 0 5px;
+}
+
+.event {
+    border-width: 1px 1px 1px 0;
+    border: solid black;
+    border-radius: 0 5px 5px 0;
 }
 
 .save, .clear {
@@ -34,9 +44,9 @@
 }
 
 .save {
-    background-color: var(--green);
+    background-color: green;
 }
 
 .clear {
-    background-color: var(--red);
+    background-color: red;
 }

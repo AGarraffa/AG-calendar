@@ -53,7 +53,6 @@ for (let i = 0; i < appt.length; i++) {
 
 // sets the contents of the planner from local storage
 for (let i=0; i < appt.length; i++) {
-    // $(appt[i].text((i+7) + 'hour'));
     let key = (i+7) + "hour"
     console.log(localStorage.getItem(key))
     appt[i].innerHTML = localStorage.getItem(key)
