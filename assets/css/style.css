@@ -1,10 +1,18 @@
+
+
 * {
     border: 1px solid red;
 }
 
 
 .planner {
-    width: 50%
+    width: 92%
 }
 
+.full-day {
+    font-size: 0.7rem;
+}
 
+.row {
+    min-height: 40px;
+}
