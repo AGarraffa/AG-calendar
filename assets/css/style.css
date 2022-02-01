@@ -34,8 +34,6 @@ body {
 .planner {
     width: 92%;
     padding-top: 40px;
-    /* border: 1px solid blue; */
-    /* border-radius: 7px; */
 }
 
 .full-day {
@@ -43,8 +41,6 @@ body {
 }
 
 .row {
-    /* border: 1px solid black; */
-    /* border-radius: 5px; */
     min-height: 50px;
     padding: 5px;
 }
@@ -67,6 +63,7 @@ body {
 .save, .clear {
     width: 100%;
     border-radius: 10px;
+    border: solid black 2.5px;
 }
 
 .save {

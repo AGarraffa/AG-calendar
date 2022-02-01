@@ -1,8 +1,3 @@
-// TODO
-// add a clear button to each hour
-// style style style
-// for the container make sure it doesn't wrap on mobile
-// maybe change the time/date at the top to be a live clock using an interval function
 
 // setting up the moment variable
 var date = moment();
