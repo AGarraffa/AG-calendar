@@ -4,20 +4,22 @@
 // for the container make sure it doesn't wrap on mobile
 // maybe change the time/date at the top to be a live clock using an interval function
 
-
-
-//moment testing
+// setting up the moment variable
 var date = moment();
 
+// the current date
 var today = date.format('MMM Do, YYYY')
 console.log(`The date is ${today}`)
 
+// the day of the week
 var day = date.format('dddd')
 console.log(`Today is ${day}`);
 
+// the current time
 var time = date.format('LT');
 console.log(`The current time is ${time}`);
 
+// rendering the date, day, and time to the html
 $('#current-time').text(`Today is ${day} ${today}. The time is ${time}.`)
 
 // array for all the div classes
@@ -30,19 +32,21 @@ const clear = $('button.clear')
 // gets the hour of the day (out of 24). Since the day starts at 7, subtract 7 from the hour to identify which div to style
 var hour = moment().hour() - 7;
 
-// sets the current hour to red
-$(appt[hour]).css('background-color', 'red');
+// sets the current hour to green
+$(appt[hour]).css('background-color', 'rgb(198, 213, 126)');
 
 // sets the other times to the respective colors
-// I wanted to use a foreach loop but it was giving me trou
+// I wanted to use a foreach loop but it was giving me trouble
 for (let i = 0; i < appt.length; i++) {
 
     if (i < hour) {
-        $(appt[i]).css('background-color', 'gray');
+        // past hours are red
+        $(appt[i]).css('background-color', 'rgb(213, 126, 126)');
     }
 
     if (i > hour) {
-        $(appt[i]).css('background-color', 'green');
+        // future hours are blue
+        $(appt[i]).css('background-color', 'rgb(162, 205, 205)');
     }
 }
 

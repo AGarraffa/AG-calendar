@@ -1,12 +1,18 @@
-
-
-* {
-    border: 1px solid red;
+:root {
+    -- green: rgb(198, 213, 126)
+    --red: rgb(213, 126, 126)
+    --blue: rgb(162, 205, 205)
+    --yellow: rgb(255, 225, 175)
 }
+
+/* * {
+    border: 1px solid red;
+} */
 
 
 .planner {
-    width: 92%
+    width: 92%;
+    border: 1px solid black;
 }
 
 .full-day {
@@ -14,5 +20,23 @@
 }
 
 .row {
+    border: 1px solid black;
     min-height: 40px;
+}
+
+.time {
+    background-color: var(--yellow);
+}
+
+.save, .clear {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.save {
+    background-color: var(--green);
+}
+
+.clear {
+    background-color: var(--red);
 }
